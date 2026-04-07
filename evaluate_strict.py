@@ -25,7 +25,7 @@ max_torque = 10.0
 torque_limit = [max_torque, 0.0]
 active_act = 0
 model_par_path = f"parameters/{robot}_parameters.yml"
-model_path = f"model_penalty_strict/best_model"
+model_path = f"trained_models/model_penalty_strict/best_model"
 
 # Model parameters
 mpar = model_parameters(filepath=model_par_path)

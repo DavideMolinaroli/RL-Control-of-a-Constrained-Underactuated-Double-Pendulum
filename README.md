@@ -15,11 +15,11 @@ This repository includes:
 ## Repository structure
 
 ```
-.
 ├── controller/                # implementation of different controllers (given)
 ├── model/                     # mathematical model of the double pendulum (given)
-├── model_default/             # default model, i.e trained without penalties and disturbances
-├── model_penalty_*            # variants with constraint penalties
+├── trained_models/
+│   ├── model_default/         # default model, i.e trained without penalties and disturbances
+│   └── model_penalty_*/       # variants with constraint penalties
 ├── parameters/                # simulation parameters
 ├── simulation/                # environment definition
 ├── utils/                     # utilities such as reset and plotting functions
@@ -27,7 +27,7 @@ This repository includes:
 ├── train_loose.py             # relaxed constraint variant
 ├── train_strict.py            # strict constraint variant
 ├── evaluate.py                # policy evaluation script
-├── RL_Project_Report.pdf      # full project report (contains plots)
+├── paper.pdf                  # project paper/report
 ```
 
 ---
@@ -69,7 +69,7 @@ python train_loose.py
 python train_strict.py
 ```
 
-As requested by the assignment, each model has its own training and evaluation script. 
+For completeness, each model has its own training and evaluation script. 
 
 Evaluations render the pendulum motion and outputs performance statistics.
 

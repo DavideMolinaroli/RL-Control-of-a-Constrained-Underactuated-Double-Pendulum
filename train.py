@@ -107,7 +107,7 @@ eval_env = DoublePendulumEnv(
 # training callbacks
 eval_callback = EvalCallback(
     eval_env,
-    best_model_save_path="model_default",
+    best_model_save_path="trained_models/model_default",
     log_path=log_dir,
     eval_freq=eval_freq,
     verbose=verbose,
@@ -124,7 +124,7 @@ agent = SAC(
 )
 
 agent.learn(total_timesteps=training_steps, callback=eval_callback, progress_bar=True)
-save_agent = "model_default/model_end_phase1"
+save_agent = "trained_models/model_default/model_end_phase1"
 agent.save(save_agent, include=["replay_buffer"])
 
 eval_freq = 1500
@@ -162,7 +162,7 @@ eval_env_phase2 = DoublePendulumEnv(
 
 eval_callback_phase2 = EvalCallback(
     eval_env_phase2,
-    best_model_save_path="model_penalty_pi6",
+    best_model_save_path="trained_models/model_penalty_pi6",
     log_path=log_dir,
     eval_freq=eval_freq,
     verbose=verbose,
@@ -172,5 +172,5 @@ eval_callback_phase2 = EvalCallback(
 # Continue training same agent
 agent.set_env(envs_phase2)
 agent.learn(total_timesteps=training_steps, callback=eval_callback_phase2, progress_bar=True)
-save_agent = "model_penalty_pi6/model_end_phase2"
+save_agent = "trained_models/model_penalty_pi6/model_end_phase2"
 agent.save(save_agent)

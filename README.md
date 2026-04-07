@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project, which was proposed for a possible participation at the 3rd AI Olympics with RealAIGym at ICRA 2025, explores the recovery of a simulated Pendubot system after it falls from its unstable upright equilibrium. The goal was to design a strategy capable of bringing the system back to the balanced state while staying within position and velocity constraints. The attempts focused on modifying the simulation environment to disturb the system, shaping the reward function based on constraint violation and applying curriculum learning to first learn the swing-up maneuver and then discover how to re-stabilize after falling. The outcome is a policy that is able to recover from a fall within the joint position constraints enforced by the competition.
+This project investigates whether model-free reinforcement learning can enforce state constraints in an underactuated Pendubot system without relying on constrained optimization. It includes a custom Gymnasium environment and SAC training pipelines for both swing-up and stabilization, along with a constraint handling strategy based on logarithmic barrier penalties and curriculum learning. The resulting policy recovers from disturbances while respecting position and velocity constraints on state evolution.
 
 This repository includes:
 - Environment setup,  

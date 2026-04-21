@@ -1,5 +1,5 @@
 # RL Control of a Constrained Underactuated Double Pendulum
-![Animaton](model_penalty_pi6/best_model_pi6.gif)
+![Animaton](trained_models/model_penalty_pi6/best_model_pi6.gif)
 
 ## Overview
 
